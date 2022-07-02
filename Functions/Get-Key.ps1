@@ -20,10 +20,10 @@ Function Get-Key {
         [Parameter()][switch]$ReturnValue
     )
 
-    $v = $Host.UI.RawUI.ReadKey().VirtualKeyCode
+    $value = $Host.UI.RawUI.ReadKey().VirtualKeyCode
     If ($ReturnValue) {
-        Write-Output " : Key pressed " $v" : Value of the key"
+        Write-Output " : Key pressed " $value" : Value of the key"
     } Else {
-        $v
+        $value
     }
 }
